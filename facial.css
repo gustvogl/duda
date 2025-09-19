@@ -1,0 +1,154 @@
+/* --- Configurações Gerais --- */
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    background-color: #ffffff;
+}
+
+/* --- Container genérico --- */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- SEÇÃO 1: HERO BANNER --- */
+.hero-section {
+    position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center;
+    height: 450px; overflow: hidden; text-align: center; color: white;
+}
+.background-image {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: url('https://i.imgur.com/gA3qjP1.jpg') no-repeat center center;
+    background-size: cover; filter: brightness(0.9); z-index: 1;
+}
+.hero-content {
+    position: relative; z-index: 2; display: flex; flex-direction: column;
+    align-items: center; gap: 20px; margin-top: -50px;
+}
+.title-container { position: relative; }
+.main-title {
+    font-family: 'Bangers', cursive; font-size: 5rem; color: #ffffff; letter-spacing: 4px;
+    -webkit-text-stroke: 4px black; text-stroke: 4px black; margin: 0;
+    text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.4);
+}
+.main-title .vs { font-size: 3rem; color: #ffc700; }
+.disponivel-banner {
+    background-color: #e63946; font-family: 'Bangers', cursive; font-size: 1.5rem;
+    padding: 2px 50px; border: 3px solid black; border-radius: 5px; position: absolute;
+    bottom: -15px; left: 50%; transform: translateX(-50%) rotate(-2deg);
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);
+}
+.steam-promo-bar {
+    display: flex; align-items: center; gap: 15px; background-color: #000000;
+    padding: 10px 40px; font-size: 1.2rem; font-weight: 900;
+    clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%); border: 2px solid #333;
+}
+.steam-logo { height: 30px; width: 30px; }
+.steam-brand { font-weight: bold; font-size: 1.3rem; }
+.steam-button {
+    background-color: #ffc700; color: #2c2100; font-size: 1.2rem; font-weight: 900;
+    text-decoration: none; padding: 15px 40px; border: 4px solid #2c2100;
+    border-radius: 8px; box-shadow: 0px 6px 0px #997800; transition: all 0.2s ease-in-out;
+}
+.steam-button:hover { background-color: #ffe066; transform: translateY(-2px); box-shadow: 0px 8px 0px #997800; }
+.steam-button:active { transform: translateY(2px); box-shadow: 0px 4px 0px #997800; }
+
+/* --- SEÇÃO 2: DESCRIÇÃO --- */
+.description-section { padding: 60px 20px; text-align: center; }
+.description-section .container { max-width: 800px; }
+.section-title-image { max-width: 100%; height: auto; margin-bottom: 30px; }
+.description-text { color: #333333; font-size: 1.1rem; line-height: 1.6; }
+.description-text strong { color: #000000; }
+
+/* --- SEÇÃO 3: FEATURES LADO A LADO --- */
+.features-section { padding: 40px 0; }
+.feature-item { display: flex; align-items: center; gap: 40px; margin-bottom: 80px; }
+.feature-item.reverse { flex-direction: row-reverse; }
+.feature-image { flex: 1; }
+.feature-image img { max-width: 100%; height: auto; }
+.feature-text { flex: 1; text-align: left; }
+.feature-title {
+    display: inline-block; background-color: #000000; color: #ffffff;
+    font-family: 'Bangers', cursive; font-size: 2rem; padding: 8px 20px;
+    letter-spacing: 1px; margin-top: 0;
+    clip-path: polygon(5% 0, 100% 0, 95% 100%, 0% 100%);
+}
+.feature-text p { font-size: 1.1rem; line-height: 1.6; color: #333; }
+
+/* --- SEÇÃO 4: LISTA DETALHADA DE FEATURES --- */
+.detailed-features-section {
+    position: relative; padding: 80px 0;
+    background-image: url('https://i.imgur.com/gK1S15P.jpg');
+    background-size: cover; background-position: center; background-attachment: fixed;
+}
+.features-main-icon { display: block; margin: 0 auto 40px auto; max-width: 250px; }
+.features-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
+.feature-box {
+    background-color: rgba(35, 25, 55, 0.85); border-radius: 5px;
+    padding: 20px; color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.feature-box h3 {
+    font-family: 'Bangers', cursive; margin: 0 0 10px 0;
+    font-size: 1.3rem; letter-spacing: 1px; color: #ffc700;
+}
+.feature-box p { margin: 0; font-size: 0.9rem; line-height: 1.5; color: #e0e0e0; }
+
+/* --- SEÇÃO 5: GALERIA (NOVO) --- */
+.gallery-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    gap: 15px;
+    margin-top: 30px;
+}
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+    border-radius: 8px;
+    border: 3px solid #eee;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gallery-item:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* --- RODAPÉ (NOVO) --- */
+.site-footer {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f8f9fa; /* Um cinza bem claro */
+    border-top: 1px solid #e9ecef;
+}
+.site-footer img {
+    max-width: 120px; /* Tamanho do logo */
+}
+
+/* --- AJUSTES PARA TELAS MENORES (RESPONSIVIDADE) --- */
+@media (max-width: 768px) {
+    /* Ajusta grid de features lado a lado */
+    .feature-item, .feature-item.reverse {
+        flex-direction: column; /* Coloca imagem em cima do texto */
+        text-align: center;
+    }
+    .feature-text { text-align: center; }
+
+    /* Ajusta grid de features detalhadas */
+    .features-grid { grid-template-columns: 1fr; } /* Apenas 1 coluna */
+
+    /* Ajusta grid da galeria */
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); } /* 2 colunas */
+}
+
+@media (max-width: 480px) {
+    .main-title { font-size: 3rem; }
+    .steam-promo-bar { flex-direction: column; clip-path: none; padding: 15px; }
+
+    /* Ajusta grid da galeria para 1 coluna */
+    .gallery-grid { grid-template-columns: 1fr; }
+}
